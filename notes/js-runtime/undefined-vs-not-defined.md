@@ -99,7 +99,7 @@ console.log(typeof bar); // "undefined"
 - Variable does not exist
 - Causes a ReferenceError
 
-> 💡 Rule of thumb
+> 💡 **Rule of thumb**
 Declared but empty → undefined
 Never declared → Not-Defined
 

@@ -63,3 +63,5 @@ const c = 15;
 - var variables are hoisted but initialized with undefined.
 - let and const variables are hoisted but cannot be accessed before declaration (TDZ).
 - Function expressions and arrow functions behave like variables and are subject to variable hoisting rules.
+
+---

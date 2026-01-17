@@ -45,3 +45,5 @@ If the variable is not found anywhere in the chain, a reference error occurs.
 
 ## Key Takeaway
 The scope chain is what enables JavaScript to support closures and predictable variable access based on where code is written.
+
+---
