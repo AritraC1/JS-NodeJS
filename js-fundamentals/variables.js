@@ -5,8 +5,8 @@
 // var (old way - mostly avoided)
 // Function-scoped (not block-scoped), Can be redeclared and reassigned, Hoisted (moved to top, initialized as undefined)
 var x = 10;
-var x = 20;   // allowed
-x = 30;       // allowed
+var x = 20; // allowed
+x = 30; // allowed
 
 if (true) {
   var y = 5;
@@ -19,13 +19,12 @@ console.log(y); // 5 (leaks outside the block)
 // Block-scoped, Cannot be redeclared in the same scope, Can be reassigned, Hoisted but in the Temporal Dead Zone (can’t be used before declaration)
 let a = 10;
 // let a = 20; error
-a = 30;        // allowed
+a = 30; // allowed
 
 if (true) {
   let b = 5;
 }
 console.log(b); // error (block-scoped)
-
 
 // Use let when the value will change.
 
@@ -41,7 +40,6 @@ arr.push(4); // allowed
 
 const obj = { name: "Alex" };
 obj.name = "Sam"; // allowed
-
 
 // What should you use?
 // Use const by default

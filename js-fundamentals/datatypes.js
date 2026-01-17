@@ -9,7 +9,7 @@ let price = 99.5;
 
 // String - Text data, written in quotes.
 let name = "Alex";
-let msg = 'Hello';
+let msg = "Hello";
 
 // Boolean - True or false values.
 let isLoggedIn = true;
@@ -26,13 +26,12 @@ let bigNum = 12345678901234567890n;
 // Symbol - Used to create unique identifiers.
 let id = Symbol("id");
 
-
 // Non-Primitive (Reference) Data Types - These store collections of values or complex objects.
 
 // Object (Key-value pairs)
 let person = {
   name: "Alex",
-  age: 16
+  age: 16,
 };
 
 // Array - Ordered list of values.
@@ -44,8 +43,8 @@ function greet() {
 }
 
 // Checking Data Types - Use typeof:
-typeof 10;        // "number"
-typeof "Hi";      // "string"
-typeof true;      // "boolean"
-typeof null;      // "object" (JS bug)
+typeof 10; // "number"
+typeof "Hi"; // "string"
+typeof true; // "boolean"
+typeof null; // "object" (JS bug)
 typeof undefined; // "undefined"
