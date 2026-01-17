@@ -1,4 +1,4 @@
-# JS Fundametals & Web Internals
+# JS Fundamentals & Web Internals
 
 > **JavaScript Runtime, Event Loop, Async Patterns & Raw Node.js HTTP Server**
 
