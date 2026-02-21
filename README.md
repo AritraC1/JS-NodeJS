@@ -1,121 +1,81 @@
-# JS Fundamentals & Web Internals
+# JavaScript Fundamentals & Web Internals
 
-> **JavaScript Runtime, Event Loop, Async Patterns & Raw Node.js HTTP Server**
+A curated collection of notes, experiments, examples and small projects that explain how JavaScript, the runtime, and the web work under the hood.
 
-This repository is a structured collection of **notes, experiments, diagrams, and implementations** focused on understanding how **JavaScript and the web actually work under the hood**.
-
-The goal is not to learn frameworks, but to build **strong mental models** for:
-- JavaScript execution
-- JavaScript Fundamental
-- Asynchronous behavior
-- The event loop
-- HTTP and Node.js internals
-
-This repo serves as the **foundation layer** for building reliable, scalable backend systems.
+Focus areas:
+- JavaScript core concepts and idioms
+- Asynchronous patterns and the event loop
+- Node.js runtime internals and simple servers
+- Hands-on experiments that reveal real runtime behavior
 
 ---
 
-## 🎯 Why This Repository Exists
+## Repository overview
 
->Most developers learn *how* to write code. This repository focuses on *how code runs*.
+Top-level folders and what you'll find in them:
+- `assets/` — supplemental images, diagrams and media used across docs and examples.
+- `core-js/` — bite-sized JS examples and experiments (arrays, promises, this, prototypes, etc.).
+- `docs/` — detailed conceptual notes: event-loop, async patterns, HTTP, Node internals and more.
+- `node-basics/` — small Node.js examples and notes.
+- `node-express-server/` — a small Express-based server skeleton (starter code).
+- `node-http-server/` — minimal examples using Node's built-in `http` module.
+- `playground/` — quick scripts to try interesting runtime behavior locally.
+- `projects/` — small sample projects (see `project-01/`, `project-02/`).
+- `short-url/` — a simple URL-shortener example (full project with routes and views).
 
-By the end of this project, you should be able to confidently answer questions like:
-- How does JavaScript execute a function?
-- Why does `setTimeout` behave the way it does?
-- What actually happens when a request hits a Node.js server?
-- How does async/await work internally?
-- How do HTTP requests flow from browser to server?
-
----
-
-## 🧵 Async Utilities
-
-**Location:** `async-utilities/`
-
-A set of small utilities built from scratch to understand:
-- Promises
-- Async / Await
-- Concurrency vs sequencing
-- Error propagation
-
-Examples:
-- `sleep(ms)`
-- `retry(fn, retries)`
-- `timeout(promise, ms)`
-- Custom `promiseAll`
-
-Each utility is intentionally minimal and documented to highlight **runtime behavior**, not just usage.
+Also check:
+- `package.json` — project metadata / scripts.
+- `log.txt` — repository notes/logs.
 
 ---
 
-## 🌐 Raw Node.js HTTP Server (No Express)
+## Quick start
 
-**Location:** `raw-http-server/`
+Requirements:
+- Node.js (LTS recommended)
 
-A minimal HTTP server built using Node’s `http` module to understand:
-- Request / response lifecycle
-- Routing without frameworks
-- Streams & buffers
-- HTTP methods and status codes
+Run a simple example or experiment:
 
-This server avoids abstractions to expose how Node.js actually handles network I/O.
+1. From repo root, run a playground script:
 
----
+```bash
+node playground/event-loop-order.js
+```
 
-## 🧠 Notes
+2. Run a small server (many examples include `index.js`):
 
-**Location:** `notes/`
+```bash
+node node-http-server/index.js
+# or
+node node-express-server/index.js
+```
 
-Organized by concept, not API:
+3. Open the docs for conceptual reading: see `docs/` for write-ups on event loop, async/await, HTTP details and more.
 
-- **js-runtime/**
-  - Execution context
-  - Call stack
-  - Closures
-- **event-loop/**
-  - Microtasks vs macrotasks
-  - Timers
-  - Promise queues
-- **async-js/**
-  - Promises
-  - Async/await
-  - Error handling
-- **web/**
-  - HTTP
-  - Status codes
-  - What happens when you type a URL
-- **nodejs/**
-  - Node event loop
-  - libuv
-  - Streams and buffers
-
-These notes are written for **long-term retention and interview clarity**.
+Note: individual projects may require `npm install` if they use dependencies (check the project folder).
 
 ---
 
-## 📊 Diagrams
-
-**Location:** `diagrams/`
-
-Visual explanations of:
-- JavaScript execution flow
-- Event loop lifecycle
-- Promise resolution
-- HTTP request/response journey
-
-Diagrams are intentionally simple and conceptual.
+## Where to read first
+- `docs/event-loop/` — microtasks vs macrotasks, timers and Promise resolution order.
+- `docs/async-js/` — Promises, `async/await` and error handling.
+- `core-js/` — run small example files to observe language behavior.
 
 ---
 
-## 🧪 Experiments
+## Projects & examples
+- `short-url/` — small full-stack example (routes, views, MongoDB connection helper).
+- `projects/project-01/`, `projects/project-02/` — sample app code and data to explore.
 
-**Location:** `experiments/`
+Each project contains a `README` or `task.txt` describing how to run it.
 
-Small scripts to observe real runtime behavior, such as:
-- Event loop execution order
-- Promise vs `setTimeout`
-- Async stack traces
+---
 
-These are used to **validate assumptions**, not memorize rules.
+## Contributing
+- Add small, focused examples or notes that clarify runtime behavior.
+- Keep experiments deterministic and well-documented.
+- If you add a new example, include a short README or inline comment with how to run it.
+
+Pull requests and issues are welcome.
 
 ---
