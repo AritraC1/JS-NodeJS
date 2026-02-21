@@ -1,0 +1,17 @@
+Design REST API
+
+GET /users - get all users - Done
+
+GET /users/id - Done
+GET /users/1 - get the user with id 1
+GET /users/2 - get the user with id 2
+
+Dynamic Path Parameter
+GET /users/:id
+:id -> dynamic | variable
+
+POST /users - create new user
+
+PATCH /users/id - edit the user with id
+
+DELETE /users/id - Delete the user with id
