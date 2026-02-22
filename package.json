@@ -8,11 +8,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "copy-env": "cp .env.example .env",
     "http": "node ./node-http-server/index.js",
     "express": "node ./node-express-server/index.js",
     "start-01": "node ./projects/project-01/index.js",
     "start-02": "nodemon ./projects/project-02/index.js",
-    "start": "nodemon ./projects/short-url/index.js"
+    "start-url": "nodemon ./projects/short-url/index.js"
   },
   "dependencies": {
     "cors": "^2.8.6",
