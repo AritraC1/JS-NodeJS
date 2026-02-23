@@ -13,11 +13,13 @@
     "express": "node ./node-express-server/index.js",
     "start-01": "node ./projects/project-01/index.js",
     "start-02": "nodemon ./projects/project-02/index.js",
-    "start-url": "nodemon ./projects/short-url/index.js"
+    "start-url": "nodemon ./projects/short-url/index.js",
+    "bot": "nodemon ./projects/discord-bot/index.js"
   },
   "dependencies": {
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
+    "discord.js": "^14.25.1",
     "dotenv": "^17.3.1",
     "ejs": "^4.0.1",
     "express": "^5.2.1",
