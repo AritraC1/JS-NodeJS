@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("./partials/head") %>
+        <title>Blogify | <%= blog.title %>
+        </title>
+</head>
+
+<body class="bg-light d-flex flex-column min-vh-100">
+
+    <%- include("./partials/navbar") %>
+
+        <!-- ================= BLOG SECTION ================= -->
+        <section class="py-5 flex-grow-1">
+            <div class="container">
+
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-5">
+
+                        <!-- Title -->
+                        <h1 class="fw-bold mb-3 text-center">
+                            <%= blog.title %>
+                        </h1>
+
+                        <!-- Meta Info -->
+                        <div class="text-muted text-center mb-4">
+                            By <strong>
+                                <%= blog.createdBy?.fullName || "Unknown" %>
+                            </strong>
+                            • <%= new Date(blog.createdAt).toLocaleString() %>
+                        </div>
+
+                        <!-- Cover Image -->
+                        <% if (blog.coverImageUrl) { %>
+                            <div class="mb-4 text-center">
+                                <img src="<%= blog.coverImageUrl %>" class="img-fluid rounded shadow-sm"
+                                    alt="Blog Cover Image" style="max-height: 450px; object-fit: cover; width: 100%;">
+                            </div>
+                            <% } %>
+
+                                <!-- Content -->
+                                <p class="fs-5 text-dark" style="white-space: pre-line;">
+                                    <%= blog.body %>
+                                </p>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= COMMENTS SECTION ================= -->
+        <section class="pb-5">
+            <div class="container">
+
+                <hr class="my-5">
+
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-5">
+
+                        <h4 class="mb-4">
+                            Comments (<%= blog.comments?.length || 0 %>)
+                        </h4>
+
+                        <!-- Add Comment Form -->
+                        <div class="card mb-4 shadow-sm border-0 bg-light">
+                            <div class="card-body">
+                                <form action="/blogs/<%= blog._id %>/comment" method="POST">
+                                    <div class="mb-3">
+                                        <textarea name="content" class="form-control" rows="3"
+                                            placeholder="Write your comment..." required></textarea>
+                                    </div>
+                                    <div class="text-end">
+                                        <button type="submit" class="btn btn-primary">
+                                            Post Comment
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Comment List -->
+                        <% if (blog.comments && blog.comments.length> 0) { %>
+                            <% blog.comments.forEach(function(comment) { %>
+                                <div class="card mb-3 border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <strong>
+                                                <%= comment.createdBy?.fullName || "Anonymous" %>
+                                            </strong>
+                                            <small class="text-muted">
+                                                <%= new Date(comment.createdAt).toLocaleString() %>
+                                            </small>
+                                        </div>
+                                        <p class="mt-2 mb-0 text-dark">
+                                            <%= comment.content %>
+                                        </p>
+                                    </div>
+                                </div>
+                                <% }) %>
+                                    <% } else { %>
+                                        <p class="text-muted text-center">
+                                            No comments yet. Be the first to comment!
+                                        </p>
+                                        <% } %>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <%- include("./partials/footer") %>
+            <%- include("./partials/scripts") %>
+
+</body>
+
+</html>
