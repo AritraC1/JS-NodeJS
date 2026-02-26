@@ -48,32 +48,32 @@ node node-http-server/index.js
 node node-express-server/index.js
 ```
 
-3. Open the docs for conceptual reading: see `docs/` for write-ups on event loop, async/await, HTTP details and more.
+3. Alternatively use npm scripts defined in `package.json`:
 
-Note: individual projects may require `npm install` if they use dependencies (check the project folder).
+```bash
+npm run http             # start minimal http server
+npm run express          # start express skeleton
+npm run start-01         # sample project-01
+npm run start-02         # sample project-02 with nodemon
+npm run start-url        # short-url project
+npm run bot              # discord-bot
+npm run start-image-uploader
+npm run start-blog-app-server
+npm run start-chat-app-server
+```
 
----
+4. Open the docs for conceptual reading: see `docs/` for write-ups on event loop, async/await, HTTP details and more.
 
-## Where to read first
-- `docs/event-loop/` — microtasks vs macrotasks, timers and Promise resolution order.
-- `docs/async-js/` — Promises, `async/await` and error handling.
-- `core-js/` — run small example files to observe language behavior.
+> Note: individual projects may require `npm install` if they use dependencies (check the project folder).
 
 ---
 
 ## Projects & examples
 - `short-url/` — small full-stack example (routes, views, MongoDB connection helper).
 - `projects/project-01/`, `projects/project-02/` — sample app code and data to explore.
-
-Each project contains a `README` or `task.txt` describing how to run it.
-
----
-
-## Contributing
-- Add small, focused examples or notes that clarify runtime behavior.
-- Keep experiments deterministic and well-documented.
-- If you add a new example, include a short README or inline comment with how to run it.
-
-Pull requests and issues are welcome.
+- `projects/blog-app/` — simple blogging platform with auth, CRUD and EJS views.
+- `projects/chat-app/` — realtime chat server using Socket.io.
+- `projects/discord-bot/` — Discord.js bot skeleton.
+- `projects/image-uploader/` — file upload/demo with Multer.
 
 ---
