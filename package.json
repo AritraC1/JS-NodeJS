@@ -16,7 +16,8 @@
     "start-url": "nodemon ./projects/short-url/index.js",
     "bot": "nodemon ./projects/discord-bot/index.js",
     "start-image-uploader": "nodemon ./projects/image-uploader/index.js",
-    "start-blog-app-server": "nodemon ./projects/blog-app/index.js"
+    "start-blog-app-server": "nodemon ./projects/blog-app/index.js",
+    "start-chat-app-server": "nodemon ./projects/chat-app/index.js"
   },
   "dependencies": {
     "cookie-parser": "^1.4.7",
@@ -29,6 +30,7 @@
     "mongoose": "^9.2.1",
     "multer": "^2.0.2",
     "nanoid": "^5.1.6",
+    "socket.io": "^4.8.3",
     "url": "^0.11.4",
     "uuid": "^13.0.0"
   },
