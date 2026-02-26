@@ -1,6 +1,6 @@
 # JavaScript Fundamentals & Web Internals
 
-A curated collection of notes, experiments, examples and small projects that explain how JavaScript, the runtime, and the web work under the hood.
+A curated collection of notes, experiments, examples and small projects that explain how JavaScript, the runtime, the NodeJs, and the web work under the hood.
 
 Focus areas:
 - JavaScript core concepts and idioms
@@ -20,12 +20,10 @@ Top-level folders and what you'll find in them:
 - `node-express-server/` — a small Express-based server skeleton (starter code).
 - `node-http-server/` — minimal examples using Node's built-in `http` module.
 - `playground/` — quick scripts to try interesting runtime behavior locally.
-- `projects/` — small sample projects (see `project-01/`, `project-02/`).
-- `short-url/` — a simple URL-shortener example (full project with routes and views).
+- `projects/` — small sample projects
 
 Also check:
 - `package.json` — project metadata / scripts.
-- `log.txt` — repository notes/logs.
 
 ---
 
